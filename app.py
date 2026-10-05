@@ -8,4 +8,4 @@ if name:
     st.write(f"Hallo {name}! Schön, dass du da bist.")
 
 
-Print("Hello, my name is Mirco")
+print("Hello, my name is Mirco")
