@@ -30,4 +30,3 @@ pages = {
 nav = st.navigation(pages)
 app_state.render_sidebar()
 nav.run()
-
