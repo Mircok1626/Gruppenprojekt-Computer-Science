@@ -1,0 +1,9 @@
+name,active_group,concentration_pct,unit,max_per_year,copper_pct,heat_sensitive,needs_folpet,protection_days
+Folpet (Kontaktmittel),Phthalimide,0.125,kg,4,0,0,0,10
+Kupferhydroxid,Kupfer,0.2,kg,,30,1,0,8
+Fosetyl-Al + Folpet,Phosphonate,0.25,kg,3,0,0,0,10
+Cymoxanil + Folpet,Cyanoacetamid-Oxime,0.2,kg,3,0,0,0,8
+Mandipropamid,CAA,0.04,l,3,0,0,1,12
+Ametoctradin + Dimethomorph,QoSI + CAA,0.16,l,3,0,0,0,12
+Zoxamid + Folpet,Benzamide,0.15,kg,3,0,0,0,10
+Kaliumphosphonat,Phosphonate,0.3,l,4,0,0,1,8
