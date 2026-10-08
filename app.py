@@ -1,13 +1,33 @@
+"""Einstieg der Streamlit-App «Spritzplaner Rebberg».
+
+Start:  streamlit run app.py
+"""
 import streamlit as st
 
-st.title("Meine erste App")
+import app_state
+from db import database as db
 
-name = st.text_input("Wie heisst du?")
+st.set_page_config(page_title="Spritzplaner Rebberg", page_icon="🍇", layout="wide")
 
-if name:
-    st.write(f"Hallo {name}! Schön, dass du da bist.")
+db.init_db()
 
+pages = {
+    "Heute": [
+        st.Page("pages/dashboard.py", title="Dashboard", icon="🚦", default=True),
+        st.Page("pages/kalender.py", title="Kalender", icon="📅"),
+        st.Page("pages/wetter.py", title="Wetter", icon="🌦️"),
+    ],
+    "Arbeit": [
+        st.Page("pages/dosierung.py", title="Dosierung", icon="🧪"),
+        st.Page("pages/journal.py", title="Journal", icon="📒"),
+        st.Page("pages/parzellen.py", title="Parzellen", icon="🗺️"),
+    ],
+    "Analyse": [
+        st.Page("pages/modell.py", title="Modell", icon="🤖"),
+    ],
+}
 
-st.write("Hello, my name is Mirco")
+nav = st.navigation(pages)
+app_state.render_sidebar()
+nav.run()
 
-st.write("nice, it worked")
